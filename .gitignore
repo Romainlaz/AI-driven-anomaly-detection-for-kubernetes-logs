@@ -1,2 +1,9 @@
-#ignorer tout
-*
+# Ignorer tous les fichiers .log
+*.log
+
+# Ignorer dossiers de logs
+kube-logs/
+.kube/
+
+# Ignorer fichiers de config sensibles
+.kube/config
