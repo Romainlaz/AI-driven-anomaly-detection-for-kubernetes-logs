@@ -1,0 +1,4 @@
+{"timestamp": "2025-10-09T12:00:00Z", "service": "auth", "message": "User login success"}
+{"timestamp": "2025-10-09T12:01:00Z", "service": "auth", "message": "User login failed"}
+{"timestamp": "2025-10-09T12:02:00Z", "service": "db", "message": "Connection timeout"}
+{"timestamp": "2025-10-09T12:03:00Z", "service": "auth", "message": "admin@example.com logged in"}

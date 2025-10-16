@@ -1,0 +1,14 @@
+version: "3.13"
+
+services:
+  data-pipeline:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: data-pipeline-py313
+    container_name: data-pipeline-container
+    volumes:
+      - ./Pipeline:/app/Pipeline
+      - ./sample_logs:/app/sample_logs
+    working_dir: /app
+    command: python run_pipeline.py
