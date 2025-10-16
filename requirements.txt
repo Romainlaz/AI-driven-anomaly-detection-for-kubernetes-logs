@@ -1,0 +1,7 @@
+numpy>=2.3.3
+pandas>=2.3.3
+scikit-learn>=1.7.2
+pyod>=2.0.5
+drain3==0.9.11
+sentence-transformers>=2.2.2
+pytest>=8.3.4
