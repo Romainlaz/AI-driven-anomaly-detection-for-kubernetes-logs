@@ -1,1 +1,32 @@
-Bla bla bla
+Introduction
+
+This MVP implements an anomaly detection system for logs using the Isolation Forest algorithm from `scikit-learn`.
+Logs are collected from Loki, normalized, anonymized, and transformed into numerical features suitable for model training and inference.
+The goal of this MVP is to demonstrate a functional end-to-end pipeline capable of detecting anomalies.
+
+
+Components
+
+### Log Connector
+- Collects logs directly from **Loki** (using REST API or `loki-client`).
+- Supports both historical queries and streaming ingestion.
+
+### Log Normalization
+- Timestamp parsing into unified ISO format.
+- PII redaction/anonymization (on by default).
+- Deduplication to reduce noise.
+- Template extraction using Drain3 or equivalent regex-based method.
+
+### Feature Engineering
+- Transform preprocessed logs into numerical vectors.
+- Supported methods:
+    - TF-IDF vectorization
+    - CountVectorizer (as fallback for low-volume logs)
+
+### Isolation Forest Model
+- Implemented using `scikit-learn`:
+- Computes anomaly scores and predicts whether a log entry is normal or anomalous.
+
+### Streaming & Sampling
+- Configurable window size and sampling rate for live inference.
+- Handles backpressure during peak log ingestion.
