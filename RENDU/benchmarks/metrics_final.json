@@ -1,0 +1,58 @@
+{
+  "model_version": "3.0.1",
+  "timestamp": "2025-12-18T01:43:18.558138",
+  "dataset": "Wiremind_Logs_2.csv",
+  "sample_size": 50000,
+  "detection": {
+    "total_anomalies": 945,
+    "anomaly_rate": 1.89,
+    "by_method": {
+      "keywords_only": 331,
+      "iso_forest_only": 614,
+      "hybrid_both": 0
+    },
+    "by_severity": {
+      "critical": 614,
+      "high": 228,
+      "medium": 103
+    }
+  },
+  "iso_forest_value": {
+    "unique_patterns_detected": 614,
+    "percentage_of_anomalies": 65.0
+  },
+  "model_config": {
+    "threshold": -0.55,
+    "n_features": 219,
+    "n_estimators": 200,
+    "n_keywords": 22
+  },
+  "features": {
+    "tfidf_templates": 200,
+    "context_onehot": 3,
+    "numeric": {
+      "text": [
+        "length",
+        "num_tokens",
+        "digit_ratio",
+        "upper_ratio",
+        "special_ratio"
+      ],
+      "semantic": [
+        "has_error_kw",
+        "is_error_level",
+        "is_warn_level",
+        "has_traceback"
+      ],
+      "temporal": [
+        "rate_5min",
+        "rate_15min",
+        "rate_1h",
+        "std_5min",
+        "std_15min",
+        "acceleration",
+        "burst_ratio"
+      ]
+    }
+  }
+}

@@ -1,0 +1,422 @@
+[
+  {
+    "log": {
+      "message": "Error: connection refused to database",
+      "namespace": "production",
+      "pod": "api-server-"
+    },
+    "result": {
+      "is_anomaly": true,
+      "confidence": 0.76965600656,
+      "severity": "high",
+      "priority": ,
+      "scores": {
+        "combined": 0.90960007,
+        "ml_model": 0.659868868698,
+        "keywords": 0.7,
+        "temporal_pattern": 0.0,
+        "context_multiplier": .5
+      },
+      "iso_forest_score": -0.00059905,
+      "threshold": -0.05,
+      "template": "error: connection refused to database",
+      "detection_method": "ml_model(0.66) + keywords(0.70)",
+      "location": {
+        "namespace": "production",
+        "pod": "api-server-"
+      },
+      "diagnostics": [
+        "\ud8d\udfe0 Error detected",
+        "\ud8d\udea8 PRODUCTION ENVIRONMENT - HIGH BUSINESS IMPACT"
+      ],
+      "recommended_actions": [
+        "\ud8d\udd0d Review application logs for error details"
+      ],
+      "impact": "\ud8d\udfe0 HIGH - Production service impacted",
+      "temporal_metrics": {
+        "error_rate_5min": 0.0,
+        "burst_ratio": 0.0,
+        "acceleration": 0.0,
+        "std_deviation": 0.0
+      }
+    }
+  },
+  {
+    "log": {
+      "message": "INFO: HTTP request completed in 5ms",
+      "namespace": "production",
+      "pod": "api-server-"
+    },
+    "result": {
+      "is_anomaly": true,
+      "confidence": 0.56799700597,
+      "severity": "medium",
+      "priority": ,
+      "scores": {
+        "combined": 0.78667676098,
+        "ml_model": 0.9905695,
+        "keywords": 0.0,
+        "temporal_pattern": 0.0,
+        "context_multiplier": .5
+      },
+      "iso_forest_score": -0.088907057,
+      "threshold": -0.05,
+      "template": "info: http request completed in 5ms",
+      "detection_method": "ml_model(0.9)",
+      "location": {
+        "namespace": "production",
+        "pod": "api-server-"
+      },
+      "diagnostics": [
+        "\ud8e\udd6 ML detected unusual pattern (no known error signature)",
+        "\ud8d\udea8 PRODUCTION ENVIRONMENT - HIGH BUSINESS IMPACT"
+      ],
+      "recommended_actions": [
+        "\ud8d\udd0d Novel anomaly - manual investigation required",
+        "\ud8d\udcdd Review full message and context"
+      ],
+      "impact": "\ud8d\udfe MEDIUM - Production warning",
+      "temporal_metrics": {
+        "error_rate_5min": 0.0,
+        "burst_ratio": 0.0,
+        "acceleration": 0.0,
+        "std_deviation": 0.0
+      }
+    }
+  },
+  {
+    "log": {
+      "message": "WARN: high memory usage detected (85%)",
+      "namespace": "monitoring",
+      "pod": "prometheus-"
+    },
+    "result": {
+      "is_anomaly": false,
+      "confidence": 0.8686908809,
+      "severity": "low",
+      "priority": ,
+      "scores": {
+        "combined": 0.8686908809,
+        "ml_model": 0.5507986,
+        "keywords": 0.,
+        "temporal_pattern": 0.0,
+        "context_multiplier": .0
+      },
+      "iso_forest_score": -0.08986655506,
+      "threshold": -0.05,
+      "template": "warn: high memory usage detected (<num>%)",
+      "detection_method": "ml_model(0.55) + keywords(0.0)",
+      "location": {
+        "namespace": "monitoring",
+        "pod": "prometheus-"
+      },
+      "diagnostics": [
+        "\ud8d\udfe Warning detected",
+        "\ud8e\udd6 ML detected unusual pattern (no known error signature)"
+      ],
+      "recommended_actions": [
+        "\ud8d\udd0d Novel anomaly - manual investigation required",
+        "\ud8d\udcdd Review full message and context"
+      ],
+      "impact": "\ud8d\udfe LOW - Isolated incident",
+      "temporal_metrics": {
+        "error_rate_5min": 0.0,
+        "burst_ratio": 0.0,
+        "acceleration": 0.0,
+        "std_deviation": 0.0
+      }
+    }
+  },
+  {
+    "log": {
+      "message": "FATAL: OutOfMemory error - pod killed",
+      "namespace": "production",
+      "pod": "worker-"
+    },
+    "result": {
+      "is_anomaly": true,
+      "confidence": 0.689775677677,
+      "severity": "medium",
+      "priority": ,
+      "scores": {
+        "combined": 0.595856786,
+        "ml_model": 0.9095557605099,
+        "keywords": .0,
+        "temporal_pattern": 0.0,
+        "context_multiplier": .5
+      },
+      "iso_forest_score": -0.05067787,
+      "threshold": -0.05,
+      "template": "fatal: outofmemory error - pod killed",
+      "detection_method": "keywords(.00)",
+      "location": {
+        "namespace": "production",
+        "pod": "worker-"
+      },
+      "diagnostics": [
+        "\ud8d\udd Critical error pattern detected",
+        "\ud8d\udea8 PRODUCTION ENVIRONMENT - HIGH BUSINESS IMPACT"
+      ],
+      "recommended_actions": [
+        "\u6a URGENT: Increase memory limits (current pod OOM killed)",
+        "\ud8d\udd0d Investigate memory leaks: kubectl top pod + heap dump"
+      ],
+      "impact": "\ud8d\udd CRITICAL - Production service DOWN or DEGRADED",
+      "temporal_metrics": {
+        "error_rate_5min": 0.0,
+        "burst_ratio": 0.0,
+        "acceleration": 0.0,
+        "std_deviation": 0.0
+      }
+    }
+  },
+  {
+    "log": {
+      "message": "INFO: Pod started successfully",
+      "namespace": "default",
+      "pod": "nginx-"
+    },
+    "result": {
+      "is_anomaly": false,
+      "confidence": 0.77550805,
+      "severity": "low",
+      "priority": ,
+      "scores": {
+        "combined": 0.77550805,
+        "ml_model": 0.67857800656,
+        "keywords": 0.0,
+        "temporal_pattern": 0.0,
+        "context_multiplier": .0
+      },
+      "iso_forest_score": -0.096557879809,
+      "threshold": -0.05,
+      "template": "info: pod started successfully",
+      "detection_method": "ml_model(0.68)",
+      "location": {
+        "namespace": "default",
+        "pod": "nginx-"
+      },
+      "diagnostics": [
+        "\ud8e\udd6 ML detected unusual pattern (no known error signature)"
+      ],
+      "recommended_actions": [
+        "\ud8d\udd0d Novel anomaly - manual investigation required",
+        "\ud8d\udcdd Review full message and context"
+      ],
+      "impact": "\ud8d\udfe LOW - Isolated incident",
+      "temporal_metrics": {
+        "error_rate_5min": 0.0,
+        "burst_ratio": 0.0,
+        "acceleration": 0.0,
+        "std_deviation": 0.0
+      }
+    }
+  },
+  {
+    "log": {
+      "message": "ERROR: CrashLoopBackOff - container exited with code ",
+      "namespace": "kube-system",
+      "pod": "coredns-"
+    },
+    "result": {
+      "is_anomaly": true,
+      "confidence": 0.669096865,
+      "severity": "medium",
+      "priority": ,
+      "scores": {
+        "combined": 0.669096865,
+        "ml_model": 0.90867575,
+        "keywords": .0,
+        "temporal_pattern": 0.0,
+        "context_multiplier": .0
+      },
+      "iso_forest_score": -0.099795789775,
+      "threshold": -0.05,
+      "template": "error: crashloopbackoff - container exited with code <num>",
+      "detection_method": "ml_model(0.9) + keywords(.00)",
+      "location": {
+        "namespace": "kube-system",
+        "pod": "coredns-"
+      },
+      "diagnostics": [
+        "\ud8d\udd Critical error pattern detected"
+      ],
+      "recommended_actions": [
+        "\u6a URGENT: Check pod logs: kubectl logs -f --previous",
+        "\ud8d\udd0d Review recent deployments and rollback if needed"
+      ],
+      "impact": "\ud8d\udfe LOW - Isolated incident",
+      "temporal_metrics": {
+        "error_rate_5min": 0.0,
+        "burst_ratio": 0.0,
+        "acceleration": 0.0,
+        "std_deviation": 0.0
+      }
+    }
+  },
+  {
+    "log": {
+      "message": "INFO: Scheduled task completed",
+      "namespace": "batch",
+      "pod": "cron-job-5"
+    },
+    "result": {
+      "is_anomaly": false,
+      "confidence": 0.990800500899,
+      "severity": "low",
+      "priority": ,
+      "scores": {
+        "combined": 0.990800500899,
+        "ml_model": 0.56880085969689,
+        "keywords": 0.0,
+        "temporal_pattern": 0.0,
+        "context_multiplier": .0
+      },
+      "iso_forest_score": -0.09599550909,
+      "threshold": -0.05,
+      "template": "info: scheduled task completed",
+      "detection_method": "ml_model(0.57)",
+      "location": {
+        "namespace": "batch",
+        "pod": "cron-job-5"
+      },
+      "diagnostics": [
+        "\ud8e\udd6 ML detected unusual pattern (no known error signature)"
+      ],
+      "recommended_actions": [
+        "\ud8d\udd0d Novel anomaly - manual investigation required",
+        "\ud8d\udcdd Review full message and context"
+      ],
+      "impact": "\ud8d\udfe LOW - Isolated incident",
+      "temporal_metrics": {
+        "error_rate_5min": 0.0,
+        "burst_ratio": 0.0,
+        "acceleration": 0.0,
+        "std_deviation": 0.0
+      }
+    }
+  },
+  {
+    "log": {
+      "message": "Exception in thread main: NullPointerException",
+      "namespace": "production",
+      "pod": "java-app-"
+    },
+    "result": {
+      "is_anomaly": true,
+      "confidence": 0.65868650,
+      "severity": "medium",
+      "priority": ,
+      "scores": {
+        "combined": 0.7909509,
+        "ml_model": 0.96598575806,
+        "keywords": 0.7,
+        "temporal_pattern": 0.0,
+        "context_multiplier": .5
+      },
+      "iso_forest_score": -0.0650776,
+      "threshold": -0.05,
+      "template": "exception in thread main: nullpointerexception",
+      "detection_method": "keywords(0.70)",
+      "location": {
+        "namespace": "production",
+        "pod": "java-app-"
+      },
+      "diagnostics": [
+        "\ud8d\udfe0 Error detected",
+        "\ud8d\udea8 PRODUCTION ENVIRONMENT - HIGH BUSINESS IMPACT"
+      ],
+      "recommended_actions": [
+        "\ud8d\udd0d Review application logs for error details"
+      ],
+      "impact": "\ud8d\udfe0 HIGH - Production service impacted",
+      "temporal_metrics": {
+        "error_rate_5min": 0.0,
+        "burst_ratio": 0.0,
+        "acceleration": 0.0,
+        "std_deviation": 0.0
+      }
+    }
+  },
+  {
+    "log": {
+      "message": "DEBUG: Cache hit rate: 9%",
+      "namespace": "production",
+      "pod": "redis-"
+    },
+    "result": {
+      "is_anomaly": false,
+      "confidence": 0.0899007078,
+      "severity": "low",
+      "priority": ,
+      "scores": {
+        "combined": 0.0559958085,
+        "ml_model": 0.870959596,
+        "keywords": 0.0,
+        "temporal_pattern": 0.0,
+        "context_multiplier": .5
+      },
+      "iso_forest_score": -0.058057769,
+      "threshold": -0.05,
+      "template": "debug: cache hit rate: <num>%",
+      "detection_method": "baseline",
+      "location": {
+        "namespace": "production",
+        "pod": "redis-"
+      },
+      "diagnostics": [
+        "\ud8d\udea8 PRODUCTION ENVIRONMENT - HIGH BUSINESS IMPACT"
+      ],
+      "recommended_actions": [],
+      "impact": "\ud8d\udfe MEDIUM - Production warning",
+      "temporal_metrics": {
+        "error_rate_5min": 0.0,
+        "burst_ratio": 0.0,
+        "acceleration": 0.0,
+        "std_deviation": 0.0
+      }
+    }
+  },
+  {
+    "log": {
+      "message": "ERROR: ImagePullBackOff - image not found",
+      "namespace": "staging",
+      "pod": "test-pod-"
+    },
+    "result": {
+      "is_anomaly": false,
+      "confidence": 0.68798985666676,
+      "severity": "low",
+      "priority": ,
+      "scores": {
+        "combined": 0.906088805556,
+        "ml_model": 0.58880708708,
+        "keywords": 0.7,
+        "temporal_pattern": 0.0,
+        "context_multiplier": .
+      },
+      "iso_forest_score": -0.06578678095,
+      "threshold": -0.05,
+      "template": "error: imagepullbackoff - image not found",
+      "detection_method": "keywords(0.70)",
+      "location": {
+        "namespace": "staging",
+        "pod": "test-pod-"
+      },
+      "diagnostics": [
+        "\ud8d\udfe0 Error detected",
+        "\ud8d\udea8 PRODUCTION ENVIRONMENT - HIGH BUSINESS IMPACT"
+      ],
+      "recommended_actions": [
+        "\ud8d\udd0d Review application logs for error details"
+      ],
+      "impact": "\ud8d\udfe LOW - Isolated incident",
+      "temporal_metrics": {
+        "error_rate_5min": 0.0,
+        "burst_ratio": 0.0,
+        "acceleration": 0.0,
+        "std_deviation": 0.0
+      }
+    }
+  }
+]

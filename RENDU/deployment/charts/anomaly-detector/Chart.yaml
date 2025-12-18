@@ -1,0 +1,14 @@
+apiVersion: v2
+name: anomaly-detector
+description: AI-driven anomaly detection for Kubernetes logs
+type: application
+version: 1.0.0
+appVersion: "1.0.0"
+keywords:
+  - anomaly-detection
+  - kubernetes
+  - logs
+  - ml
+maintainers:
+  - name: gael-kherfouche
+home: https://github.com/gael-kherfouche/AI-driven-anomaly-detection-for-kubernetes-logs
